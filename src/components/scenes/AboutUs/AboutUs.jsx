@@ -16,16 +16,16 @@ const AboutUs = () => {
   const paragraphs = [
     "To dedicate ourselves to passionately crafting unique living masterpieces as an ethical, " +
       "progressive and socially sensitive organization.",
-    "To be recognised as India’s finest and most respected real estate company leveraging creativity and augmenting " +
-      "life to the fullest.",
+    "To be recognised as India’s finest and most respected civil development company leveraging creativity and augmenting " +
+      "creation to the fullest.",
     "If there’s one thing that resonates from every project we undertake, it’s engineering excellence. Continuous research has made us " +
-      "specialists in the civil work industry. And the reason the government keeps coming back to us to help design these projects is because we " +
+      "specialists in the civil industry. And the reason the government keeps coming back to us to help design these projects is because we " +
       "understand the need of a refined and execellent service. Using the finest of materials, cutting-edge processes " +
       "and technologies, and precision quality, we engineer projects that delight right from the master plan to the concrete " +
       "that forms the foundations of the structures that define them.",
     "At Pranay Engineers, we take great pride in our creations. Built with passion and precision. And designed to deliver perfection. " +
       "No detail is too small nor any vision too big. With superior craftsmanship, creativity and extensive planning, every project we " +
-      "undertake becomes a true reflection of everything that Chaithanya stands for. From the master plan to the concrete that forms the " +
+      "undertake becomes a true reflection of everything that Pranay Teja Engineers stands for. From the master plan to the concrete that forms the " +
       "foundations of the structures that define them. And our Clients are our constant " +
       "inspiration, challenging us to outdo and outbuild even ourselves every time." +
       " Planned, crafted, " +
@@ -60,11 +60,11 @@ const AboutUs = () => {
             hands of an artist.
           </p>
           <p>
-            The baton of leadership has now been passed on to the hands of his
-            son, Mr. Guru Prasad (MD), for whom God is in details. Perfection
-            has a deeper meaning for him than what is captured in lexicons. His
-            progressive and innovative vision together with global sensibilities
-            guide the organization.
+            The baton of leadership is now shared with his son, Mr. Pranay Teja
+            Reddy (MD), for whom God is in details. Perfection has a deeper
+            meaning for him than what is captured in lexicons. His progressive
+            and innovative vision together with global sensibilities guides the
+            organization.
           </p>
         </div>
         <img className={s.liferayImg} src={businessProcess2} alt="liferay1" />
