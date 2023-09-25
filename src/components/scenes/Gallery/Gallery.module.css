@@ -1,0 +1,88 @@
+.projectContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectMain {
+    padding: 0 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 50px;
+    text-align: center;
+}
+
+.project {
+    text-align: center;
+    width: 100%;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2%;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition-duration: 0.5s;
+}
+
+.project:hover {
+    transition-duration: 0.5s;
+    background-color: rgb(230, 120, 23);
+}
+
+.project:hover h2 {
+    transition-duration: 0.5s;
+    color: white;
+}
+
+.project h2 {
+    transition-duration: 0.5s;
+    font-weight: 600;
+}
+
+.project img {
+    width: 95%;
+}
+
+.grid {
+    margin-top: 7rem;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 20px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1500px) {
+    .grid {
+        grid-template-columns: 25% 25% 25%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .grid {
+        grid-template-columns: 40% 40%;
+    }
+    .text h1 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .grid {
+        grid-template-columns: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 90%;
+    }
+}
