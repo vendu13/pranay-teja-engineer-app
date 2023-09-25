@@ -58,7 +58,7 @@ const Footer = () => {
       <div className={style.line} />
       <div className={style.footerBlock}>
         <div className={style.copyright}>
-          All Rights Reserved © 2020 – 2022, Pranay Engineers Pvt Ltd
+          All Rights Reserved © 2020 – 2023, Pranay Teja Engineers Pvt Ltd
         </div>
         <div className={style.solutions}>
           <Link
