@@ -321,7 +321,7 @@ const Header = ({ isTopOfPage, show }) => {
                     setIsMenuToggled(!isMenuToggled);
                   }}
                 >
-                  For Enquiry: +918792248928
+                  For Enquiry: +91 8792248928
                 </a>
               </div>
               <div className={style.line} />
