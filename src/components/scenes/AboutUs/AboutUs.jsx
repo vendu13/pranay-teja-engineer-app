@@ -43,7 +43,7 @@ const AboutUs = () => {
       <div className={style.aboutImageText}>
         <img className={style.image} src={about} alt="about" />
         <div className={style.text}>
-          <h1>About Pranay Engineers</h1>
+          <h1>About Pranay Teja Engineers</h1>
         </div>
       </div>
 
