@@ -33,8 +33,8 @@ const Header = ({isTopOfPage}) => {
             <div className={style.aboveHeader}>
                 <img src={logo} alt="logo" className={style.logo}/>
                 <div className={style.headerText}>
-                    <h2>SHANKARANARAYANA</h2>
-                    <h2>CONSTRUCTIONS PVD LTD</h2>
+                    <h2>PRANAY TEJA</h2>
+                    <h2>ENGINEERS PVT LTD</h2>
                     <h3>Nation Builders Since 1960</h3>
                 </div>
             </div>
@@ -74,9 +74,6 @@ const Header = ({isTopOfPage}) => {
                                 className={style.headerContainer}
                                 style={styleHeader ? {backgroundColor: "black"} : {}}
                             >
-                                <Link to="/">
-                                    <img src={logo} alt="logo" className={style.logo}/>
-                                </Link>
                                 <ul className={style.menu}>
                                     <li
                                         onMouseOver={() => {

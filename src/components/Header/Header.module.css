@@ -35,7 +35,7 @@
     left: 0;
     right: 0;
     font-weight: 500;
-    z-index: 30;
+    z-index: 100;
     display: flex;
     flex-direction: column;
 }
@@ -45,7 +45,7 @@
     padding: 1rem 6rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: stretch;
 }
 
 .headerContainer2 {
@@ -77,12 +77,14 @@
 }
 
 .menu, .technology {
+    padding: 0 15vw;
     max-width: 100%;
     padding-top: 10px;
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    width: 100%;
+    justify-content: space-between;
     color: white;
 }
 
