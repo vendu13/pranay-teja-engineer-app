@@ -19,7 +19,7 @@ const Header = ({isTopOfPage}) => {
 
     const [styleHeader, setStyleHeader] = useState(false);
     const [showProjects, setShowProjects] = useState(false);
-    const [showAbout, setShowAbout] = useState(true);
+    const [showAbout, setShowAbout] = useState(false);
 
     const disableAll = () => {
         setShowProjects(false);
