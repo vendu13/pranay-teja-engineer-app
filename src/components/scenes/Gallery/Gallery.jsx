@@ -31,10 +31,10 @@ const Gallery = () => {
             </div>
 
             <Grid className={s.grid}>
-                {projects.map((el) => (
+                {projects.map((el, index) => (
                     <Flex
                         className={s.project}
-                        key={el.title}
+                        key={index}
                         onClick={() => {
                             setPickedProject(el);
                             navigate(`/gallery/${el.title}`)

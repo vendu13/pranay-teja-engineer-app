@@ -21,22 +21,21 @@ const NewProject = () => {
 
     return (
         <div className={s.projectContainer}>
-            {projectsFiltered.length > 0 &&
-                <>
-                    <div className={s.aboutImageText}>
-                        <img className={s.image} src={newProject} alt='about'/>
-                        <div
-                            className={s.textMain}
-                        >
-                            <h1>New Project</h1>
-                        </div>
+            <>
+                <div className={s.aboutImageText}>
+                    <img className={s.image} src={newProject} alt='about'/>
+                    <div
+                        className={s.textMain}
+                    >
+                        <h1>New Project</h1>
                     </div>
-
+                </div>
+                {projectsFiltered.length > 0 &&
                     <Grid className={s.grid}>
-                        {projectsFiltered.map((el) => (
+                        {projectsFiltered.map((el, index) => (
                             <Flex
                                 className={s.project}
-                                key={el.title}
+                                key={index}
                                 onClick={() => {
                                     setPickedProject(el);
                                     navigate(`/project/${el.title}`)
@@ -49,8 +48,8 @@ const NewProject = () => {
                             </Flex>
                         ))}
                     </Grid>
-                </>
-            }
+                }
+            </>
         </div>
     )
 }

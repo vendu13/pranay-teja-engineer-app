@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button/Button.jsx";
 import style from "./Footer.module.css";
 import logo from "../../assets/logo.webp";
-import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -25,34 +25,7 @@ const Footer = () => {
           {/*    <a target='_blank' href='https://www.linkedin.com/company/source-one-management-services-pvt-ltd?trk=mini-profile-title' style={{color: "white"}} rel="noreferrer"><BsLinkedin/></a>*/}
         </div>
         <div className={style.tech}>
-          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-            Home
-          </Link>
-          •
-          <Link to="/about" style={{ color: "white", textDecoration: "none" }}>
-            About
-          </Link>
-          •
-          <Link
-            to="/projects/new"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            New Project
-          </Link>
-          •
-          <Link
-            to="/projects/completed"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Completed Projects
-          </Link>
-          •
-          <Link
-            to="/projects/under-construction"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Under Construction
-          </Link>
+
         </div>
       </div>
       <div className={style.line} />

@@ -114,7 +114,7 @@
     }
 
     .text h1 {
-        top: 35%;
+        top: 50%;
         text-align: center;
         padding: 0 1rem;
         font-size: 1.8rem;
@@ -269,7 +269,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 43%;
+    top: 58%;
     margin: auto;
     width: fit-content; /* Need a specific value to work */
     font-size: 80px;
@@ -480,7 +480,7 @@
         padding: 3rem 2rem 0;
     }
     .aboutImageText {
-        height: 80vh;
+        height: 60vh;
     }
 
     .aboutImageText img {
@@ -488,7 +488,7 @@
     }
 
     .text h1 {
-        top: 35%;
+        top: 50%;
         text-align: center;
         padding: 0 1rem;
         font-size: 1.8rem;

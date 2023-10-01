@@ -69,13 +69,13 @@ const ProjectGallery = () => {
                             {gallery.length > 0
                                 ?
                                 <Grid className={s.grid}>
-                                    {gallery.map(el => (
+                                    {gallery.map((el, index) => (
                                         <img
                                             onClick={() => {
                                                 setGalleryImages(gallery)
                                                 showModal()
                                             }}
-                                            key={el.original}
+                                            key={index}
                                             className={s.gridImage}
                                             src={el.original}
                                             alt={el.original}

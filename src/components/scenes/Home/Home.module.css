@@ -1,12 +1,51 @@
 
 .projectContainer {
+    background-color: rgb(67, 56, 27);;
     margin: 3.5rem 0;
-    width: 100%;
+    padding: 4rem 20%;
+}
+
+.swiperFlex {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
+.swiperSecond {
+    padding: 2rem 5rem;
+    color: #ccc;
+    text-align: center;
+}
+
+.swiperSecond p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.swiperSecond h3 {
+    font-weight: 400;
+}
+
+.dark {
+    margin: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.white {
+    margin: 0.3rem;
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.Line {
+    display: block;
+    width: 150px;
+    border: 0;
+    border-top: 6px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 
 .project {
     text-align: center;
@@ -18,7 +57,7 @@
     border-radius: 2%;
     padding: 0.5rem 0;
     cursor: pointer;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     transition-duration: 0.5s;
 }
 
@@ -81,16 +120,15 @@
     z-index: -10;
 }
 
-.aboutImageText:hover .image {
-    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    transition-duration: 1s;
+.textMain {
+    z-index: 30;
 }
 
 .textMain h1 {
     position: absolute;
     left: 0;
     right: 0;
-    top: 37%;
+    top: 57%;
     margin: auto;
     width: fit-content; /* Need a specific value to work */
     font-size: 120px;
@@ -99,7 +137,30 @@
     transition: 0.5s;
 }
 
+.aboutImageText a {
+    top: 80%;
+    z-index: 30;
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.aboutImageText a:hover {
+    background-color: #fff;
+    color: black;
+    transition: 0.5s;
+}
+
 .text2 {
+z-index: 30;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,7 +169,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 3vh;
+    bottom: -8vh;
     margin: auto;
     width: 80%;
     background-color: rgba(0, 0, 0, 0.50);
@@ -287,12 +348,31 @@
     .textMain h1 {
         font-size: 5rem;
     }
+
+    .white {
+        font-size: 1.2rem;
+    }
+
+    .projectContainer {
+        padding: 4rem 1%;
+    }
+
+    .swiperSecond {
+        padding: 2rem 3rem;
+    }
+
+    .swiperSecond p {
+        font-size: 1rem;
+    }
+
     .projectContainer h1 {
         font-size: 2rem;
     }
+
     .text2 h1 {
         font-size: 2rem;
     }
+
     .grid {
         grid-template-columns: 40% 40%;
     }
@@ -301,7 +381,7 @@
 
 @media only screen and (max-width: 1040px) {
     .aboutImageText {
-        height: 80vh;
+        height: 60vh;
     }
 
     .aboutImageText img {
@@ -309,7 +389,7 @@
     }
 
     .textMain h1 {
-        top: 35%;
+        top: 50%;
         text-align: center;
         padding: 0 1rem;
         font-size: 1.8rem;

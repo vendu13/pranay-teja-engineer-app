@@ -19,6 +19,9 @@ import Project from "./components/scenes/Project/Project.jsx";
 import Gallery from "./components/scenes/Gallery/Gallery.jsx";
 import ProjectGallery from "./components/scenes/ProjectGallery/ProjectGallery.jsx";
 import Contact from "./components/scenes/ContactUs/Contact.jsx";
+import EnvSafetyQuality from "./components/scenes/AboutUs/EnvSafetyQuality.jsx";
+import KeyPeople from "./components/scenes/AboutUs/KeyPeople.jsx";
+import DirectorsMessage from "./components/scenes/AboutUs/DirectorsMessage.jsx";
 
 function App() {
     const {isLoading, isFetching} = useGetMeQuery(null);
@@ -30,10 +33,10 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
 
-            if (window.scrollY < 80) {
+            if (window.scrollY < 150) {
                 setIsTopOfPage(true)
             }
-            if (window.scrollY > 80) setIsTopOfPage(false)
+            if (window.scrollY > 150) setIsTopOfPage(false)
 
             if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
                 setShow(false);
@@ -60,7 +63,10 @@ function App() {
                 <Header show={show} isTopOfPage={isTopOfPage}/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
-                    <Route path='/about' element={<AboutUs/>}/>
+                    <Route path='/about/mission-vision-values' element={<AboutUs/>}/>
+                    <Route path='/about/safety-quality' element={<EnvSafetyQuality/>}/>
+                    <Route path='/about/key-people' element={<KeyPeople/>}/>
+                    <Route path='/about/directors-message' element={<DirectorsMessage/>}/>
                     <Route path='/contact' element={<Contact />}/>
                     <Route path='/projects/new' element={<NewProject/>}/>
                     <Route path='/projects/completed' element={<CompletedProjects/>}/>
