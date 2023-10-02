@@ -21,7 +21,6 @@ const Home = () => {
             <div className={style.aboutImageText}>
                 <Swiper
                     speed={350}
-                    spaceBetween={30}
                     centeredSlides={true}
                     autoplay={{
                         delay: 4500,
