@@ -19,7 +19,7 @@ const Footer = () => {
       <div className={style.line} />
       <div className={style.footerBlock}>
         <div className={style.links}>
-          <a target="_blank" href="/" style={{ color: "white" }}>
+          <a target="_blank" href="/" style={{ color: "black" }}>
             <BsFacebook />
           </a>
           {/*    <a target='_blank' href='https://www.linkedin.com/company/source-one-management-services-pvt-ltd?trk=mini-profile-title' style={{color: "white"}} rel="noreferrer"><BsLinkedin/></a>*/}
@@ -36,19 +36,19 @@ const Footer = () => {
         <div className={style.solutions}>
           <Link
             to="/gallery"
-            style={{ color: "white", textDecoration: "none" }}
+            style={{ color: "black", textDecoration: "none" }}
           >
             GALLERY
           </Link>
           <div className={style.lineVertical} />
           <Link
             to="/contact"
-            style={{ color: "white", textDecoration: "none" }}
+            style={{ color: "black", textDecoration: "none" }}
           >
             CONTACT
           </Link>
           <div className={style.lineVertical} />
-          <Link to="/admin" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/admin" style={{ color: "black", textDecoration: "none" }}>
             ADMIN
           </Link>
         </div>

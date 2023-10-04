@@ -31,11 +31,10 @@ const Header = ({isTopOfPage}) => {
     return (
         <>
             <div className={style.aboveHeader}>
-                <img src={logo} alt="logo" className={style.logo}/>
+                <img src={logo} alt="logo"  className={style.logo}/>
                 <div className={style.headerText}>
-                    <h2>PRANAY TEJA</h2>
-                    <h2>ENGINEERS PVT LTD</h2>
-                    <h3>Nation Builders Since 1960</h3>
+                    <h2 className={style.textAnimation}>PRANAY TEJA ENGINEERS PVT LTD</h2>
+                    <h3>_</h3>
                 </div>
             </div>
             <AnimatePresence>
@@ -255,11 +254,6 @@ const Header = ({isTopOfPage}) => {
                             className={style.headerContainer2}
                             style={styleHeader ? {backgroundColor: "black"} : {}}
                         >
-                            {!isAboveMobileScreens && (
-                                <Link to="/">
-                                    <img src={logo} alt="logo" className={style.logo}/>
-                                </Link>
-                            )}
                             <div></div>
                             <button
                                 className={style.menuButton}

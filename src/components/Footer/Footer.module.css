@@ -1,12 +1,11 @@
 .footer {
     overflow: hidden;
-    margin-top: 10rem;
     padding: 1.5rem 6rem;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: black;
     gap: 1rem;
-    background-color: #946a2a;
+    background-color: #FFF5E0;
 }
 
 .footerBlock {
@@ -17,7 +16,7 @@
 
 .line {
     width: 100%;
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid black;
 }
 
 .image {
@@ -56,7 +55,7 @@
 .lineVertical {
     height: 30px;
     display: block;
-    border-left: 2px solid #f0f0f0;
+    border-left: 2px solid black;
 }
 
 @-webkit-keyframes color-change-2x {
