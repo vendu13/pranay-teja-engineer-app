@@ -20,7 +20,7 @@ const DirectorsMessage = () => {
 
       <div className={s.liferayOverview}>
         <div className={s.liferayOverviewText}>
-          <h1>Leveraging for a sustainable infra.</h1>
+          <h1>Leveraging for a Sustainable Infra</h1>
           <p>
             “At the heart of PranayTeja Engineers lies a profound respect for
             the land of Karnataka and its people. Each lift irrigation project
