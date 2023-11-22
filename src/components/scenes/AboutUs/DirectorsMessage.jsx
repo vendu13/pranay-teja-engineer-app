@@ -2,7 +2,7 @@ import style from "./AboutUs.module.css";
 import { useEffect } from "react";
 import s from "./BusinessProcess.module.css";
 import director from "../../../assets/director.jpg";
-import dir from "../../../assets/dir.png";
+import dir from "../../../assets/dir.jpg";
 
 const DirectorsMessage = () => {
   useEffect(() => {
