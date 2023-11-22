@@ -34,7 +34,7 @@ const Header = ({ isTopOfPage }) => {
         <img src={logo} alt="logo" className={style.logo} />
         <div className={style.headerText}>
           <h2 className={style.textAnimation}>PRANAYTEJA ENGINEERS</h2>
-          <h3>_</h3>
+          <h3>Innovating with Integrity</h3>
         </div>
       </div>
       <AnimatePresence>
