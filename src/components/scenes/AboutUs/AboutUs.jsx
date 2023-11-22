@@ -21,7 +21,7 @@ const AboutUs = () => {
     "Our ethos revolves around blending the art and science of engineering." +
       " With a profound respect for both traditional wisdom and modern innovation, our solutions embody efficiency, resilience, and sustainability." +
       " Each endeavor is championed by a dedicated team who work tirelessly, ensuring that the trust placed in us by the communities and the government is always upheld.",
-    "At PranayTeja Engineers Pvt Ltd, craftsmanship goes beyond construction; it is a heartfelt commitment to the communities we serve." +
+    "At PranayTeja Engineers, craftsmanship goes beyond construction; it is a heartfelt commitment to the communities we serve." +
       " Every element of our projects, be it a brick or a canal, reflects our deep-seated passion and meticulous attention to detail." +
       " It's not just about building infrastructures, but about sculpting landmarks of hope, reliability, and lasting service.",
   ];
