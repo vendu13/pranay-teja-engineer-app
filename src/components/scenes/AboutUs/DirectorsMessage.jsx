@@ -47,7 +47,7 @@ const DirectorsMessage = () => {
             I would like to thank everyone for your trust and belief in our
             mission. Here's to a future brimming with possibilities.
           </p>
-          <p>Sri.P.Venkateshwara Rao</p>
+          <p>Sri. Y.N. Reddy</p>
         </div>
         <img className={s.liferayImg} src={dir} alt="liferay1" />
       </div>
