@@ -15,15 +15,15 @@ const AboutUs = () => {
   ];
   const paragraphs = [
     "Our mission is to harness the transformative power of lift irrigation to nurture and sustain communities throughout Karnataka." +
-      "By making water accessible to every doorstep, we not only aim to quench thirst but to foster growth, prosperity, and well-being for every individual.",
+      " By making water accessible to every doorstep, we not only aim to quench thirst but to foster growth, prosperity, and well-being for every individual.",
     "We envision a Karnataka where every household is enriched by the life-giving force of water, irrespective of their location or challenges." +
-      "As pioneers in lift irrigation, we aim to be the beacon of hope, ensuring that water scarcity becomes a forgotten narrative in the annals of our state's history.",
+      " As pioneers in lift irrigation, we aim to be the beacon of hope, ensuring that water scarcity becomes a forgotten narrative in the annals of our state's history.",
     "Our ethos revolves around blending the art and science of engineering." +
-      "With a profound respect for both traditional wisdom and modern innovation, our solutions embody efficiency, resilience, and sustainability." +
-      "Each endeavor is championed by a dedicated team who work tirelessly, ensuring that the trust placed in us by the communities and the government is always upheld.",
+      " With a profound respect for both traditional wisdom and modern innovation, our solutions embody efficiency, resilience, and sustainability." +
+      " Each endeavor is championed by a dedicated team who work tirelessly, ensuring that the trust placed in us by the communities and the government is always upheld.",
     "At PranayTeja Engineers Pvt Ltd, craftsmanship goes beyond construction; it is a heartfelt commitment to the communities we serve." +
-      "Every element of our projects, be it a brick or a canal, reflects our deep-seated passion and meticulous attention to detail." +
-      "It's not just about building infrastructures, but about sculpting landmarks of hope, reliability, and lasting service.",
+      " Every element of our projects, be it a brick or a canal, reflects our deep-seated passion and meticulous attention to detail." +
+      " It's not just about building infrastructures, but about sculpting landmarks of hope, reliability, and lasting service.",
   ];
 
   useEffect(() => {
