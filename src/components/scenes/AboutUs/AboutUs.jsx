@@ -14,24 +14,16 @@ const AboutUs = () => {
     "Craftsmanship",
   ];
   const paragraphs = [
-    "To dedicate ourselves to passionately crafting unique living masterpieces as an ethical, " +
-      "progressive and socially sensitive organization.",
-    "To be recognised as India’s finest and most respected civil development company leveraging creativity and augmenting " +
-      "creation to the fullest.",
-    "If there’s one thing that resonates from every project we undertake, it’s engineering excellence. Continuous research has made us " +
-      "specialists in the civil industry. And the reason the government keeps coming back to us to help design these projects is because we " +
-      "understand the need of a refined and execellent service. Using the finest of materials, cutting-edge processes " +
-      "and technologies, and precision quality, we engineer projects that delight right from the master plan to the concrete " +
-      "that forms the foundations of the structures that define them.",
-    "At Pranay Engineers, we take great pride in our creations. Built with passion and precision. And designed to deliver perfection. " +
-      "No detail is too small nor any vision too big. With superior craftsmanship, creativity and extensive planning, every project we " +
-      "undertake becomes a true reflection of everything that Pranay Teja Engineers stands for. From the master plan to the concrete that forms the " +
-      "foundations of the structures that define them. And our Clients are our constant " +
-      "inspiration, challenging us to outdo and outbuild even ourselves every time." +
-      " Planned, crafted, " +
-      "and created with engineering excellence to constantly delight. Every Pranay Teja Engineers' project has a unique feature that reinforces " +
-      "science in everyday lives. Be it the amenities that stand out and make a space for themselves or the incorporation of life " +
-      "sciences that support utility and comfort.",
+    "Our mission is to harness the transformative power of lift irrigation to nurture and sustain communities throughout Karnataka." +
+      "By making water accessible to every doorstep, we not only aim to quench thirst but to foster growth, prosperity, and well-being for every individual.",
+    "We envision a Karnataka where every household is enriched by the life-giving force of water, irrespective of their location or challenges." +
+      "As pioneers in lift irrigation, we aim to be the beacon of hope, ensuring that water scarcity becomes a forgotten narrative in the annals of our state's history.",
+    "Our ethos revolves around blending the art and science of engineering." +
+      "With a profound respect for both traditional wisdom and modern innovation, our solutions embody efficiency, resilience, and sustainability." +
+      "Each endeavor is championed by a dedicated team who work tirelessly, ensuring that the trust placed in us by the communities and the government is always upheld.",
+    "At PranayTeja Engineers Pvt Ltd, craftsmanship goes beyond construction; it is a heartfelt commitment to the communities we serve." +
+      "Every element of our projects, be it a brick or a canal, reflects our deep-seated passion and meticulous attention to detail." +
+      "It's not just about building infrastructures, but about sculpting landmarks of hope, reliability, and lasting service.",
   ];
 
   useEffect(() => {
