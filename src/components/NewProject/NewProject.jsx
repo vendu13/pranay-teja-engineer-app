@@ -41,14 +41,13 @@ const NewProject = () => {
                 }}
               >
                 <img
-                  style={{ width: "95%", height: "11.5rem" }}
+                  style={{ width: "95%", height: "12.5rem" }}
                   src={`${API_URL}image/${el.title}/main/0.jpeg`}
                   alt={el.title}
                 />
                 <h2 className={s.text}>{el.title}</h2>
               </Flex>
             ))}
-            s
           </Grid>
         )}
       </>
