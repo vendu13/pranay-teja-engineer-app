@@ -65,8 +65,8 @@ const Contact = () => {
                         <div className={s.blockItem}>
                             <GrMapLocation className={s.icon}/>
                             <p>
-                                XHPJ+WP3, Shivanand circle, Kumara Park East, Seshadripuram,
-                                Bengaluru, Karnataka 560001
+                                #202, second Floor, Crescent Habitat, # 9 Srikantan Layout, Off Crescent Road, 
+                                Bengaluru, Karnataka - 560001
                             </p>
                         </div>
                         <div className={s.blockItem}>
