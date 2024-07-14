@@ -1,0 +1,69 @@
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    color: #2C3639;
+    text-align: left;
+    background-color: #D0E7D2;
+}
+
+.carouselImg {
+    width: 50%;
+    object-fit: cover;
+}
+
+.carouselMain {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+}
+
+.carouselMainH {
+    width: fit-content;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carouselMainH2 {
+    width: fit-content;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #5F6769;
+}
+
+.carouselMainP {
+    font-size: 1.3rem;
+}
+
+.carouselMainP2 {
+    font-size: 1.3rem;
+    color: #5F6769;
+}
+
+.carouselMainH:hover {
+    background-image: linear-gradient(to right,  rgba(255,255,255,1) 2%, rgba(230,120,23,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 1040px) {
+    .carousel h1 {
+        font-size: 3rem;
+    }
+    .carousel {
+        flex-direction: column;
+        height: auto;
+    }
+    .carousel img {
+        width: 100%;
+    }
+    .carouselMain {
+        width: auto;
+    }
+    .carouselMainH2 {
+
+    }
+}

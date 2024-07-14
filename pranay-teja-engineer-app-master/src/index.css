@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import "react-image-gallery/styles/css/image-gallery.css";
+
+html,
+body,
+#root,
+.app {
+  font-family: "Montserrat", sans-serif;
+  @apply text-gray-500;
+  margin: 0;
+  width: 100%;
+}
+
+
+h2,p {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+h1 {
+  font-size: 3.2rem;
+}
+
+p {
+  line-height: 28px;
+  font-size: 1.15rem;
+  font-weight: 500;
+}

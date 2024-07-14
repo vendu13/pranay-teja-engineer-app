@@ -1,0 +1,139 @@
+.loginContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #b6b6b6;
+    color: white;
+}
+
+.loginCard {
+    -webkit-animation: bounce-in-top 1.1s both;
+    animation: bounce-in-top 1.1s both;
+    width: 30%;
+    border-radius: 25px;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #272a31;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.loginForm {
+    width: 100%;
+}
+
+.loginFieldset, .loginFieldsetCompleted {
+    transition-duration: 0.5s;
+    height: 55px;
+    border: 2px solid #979aa1;
+    border-radius: 60px;
+    font-size: 16px;
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    cursor: text;
+}
+
+.loginFieldsetCompleted {
+    border: 2px solid rgba(230,120,23,1);
+}
+
+.loginLine {
+    border-left: 1px solid #979aa1;
+    height: 22px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.fieldset:hover {
+    border: 2px solid rgba(230,120,23,1);
+}
+
+.legend {
+    margin-left: 15px;
+    margin-bottom: 0;
+    width: auto;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+.loginInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    width: 80%;
+}
+
+.iconLogin {
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+.loginText {
+    font-size: 14px;
+    display: flex;
+    margin: 30px auto 0 auto;
+    width: fit-content;
+}
+
+.loginError {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    height: 20px;
+    color: #e76565;
+}
+
+.loginInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    width: 80%;
+}
+
+
+.loginButton {
+    background-image: linear-gradient(to right, rgba(230,120,23,1) 0%, #bdbdbd 51%, rgba(230,120,23,1)  100%);
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .loginCard {
+        width: 90%;
+    }
+}
+
+
+@keyframes pan {
+    100% { background-position: 15% 50% }
+}
