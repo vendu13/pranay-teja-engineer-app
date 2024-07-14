@@ -1,0 +1,575 @@
+.liferayOverview {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8rem 0;
+}
+
+.liferayOverviewText {
+    width: 45%;
+}
+
+.liferayOverviewText h1 {
+    text-align: center;
+}
+
+.liferayOverviewText p {
+    color: #414141;
+}
+
+.liferayImg {
+    height: 65%;
+    width: 45%;
+}
+
+.solutions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 8rem;
+}
+
+
+.line {
+    width: 100%;
+    border-top: 2px solid #605f5f;
+    margin: 3rem 0;
+}
+
+
+.overview {
+    width: 100%;
+    height: 100%;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.overviewTitle {
+    margin: auto;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.overviewPart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7%;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+.overviewPart1H {
+    width: 50%;
+    font-size: 3.2rem;
+}
+
+.span {
+    color: #767676;
+}
+
+.overviewPart1P {
+    width: 47%;
+    line-height: 28px;
+    align-self: flex-end;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.overviewPart2H {
+    align-self: flex-start;
+    line-height: initial;
+    font-size: 3.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.overviewPart2 {
+    width: 53%;
+    line-height: 28px;
+}
+
+.overviewPart2h {
+    font-size: 1.3rem;
+    line-height: initial;
+    font-weight: 500;
+}
+
+.imagePart {
+    width: 50%;
+    height: 25rem;
+}
+
+
+@media only screen and (max-width: 1040px) {
+    .aboutImageText {
+        height: 80vh;
+    }
+
+    .aboutImageText img {
+        object-fit: cover;
+    }
+
+    .text h1 {
+        top: 50%;
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+    }
+
+    .liferayOverview, .liferayOverview2, .solutions {
+        height: auto;
+        flex-direction: column;
+        width: auto;
+        padding: 3rem 5%;
+    }
+
+    .liferayOverviewText, .liferayOverviewText2, .liferayOverview2 {
+        width: auto;
+    }
+
+    .liferayOverviewText, .liferayOverviewText2, .liferayOverviewText22 {
+        width: 100%;
+    }
+
+    .liferayImg {
+        width: 100%;
+    }
+
+    .services {
+        width: 100%;
+    }
+
+    .overviewPart {
+        flex-direction: column;
+    }
+
+    .overviewPart2 {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .overviewPart2H {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagePart {
+        width: 100%;
+    }
+}
+
+
+.desc {
+    text-align: center;
+    font-weight: 500;
+    padding: 4rem 8rem 0;
+}
+
+.list {
+    border: 2px rgba(230, 120, 23, 1) solid;
+    padding: 3.5rem 4rem;
+    border-radius: 10px;
+    margin-top: 6rem;
+    width: 60%;
+
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gallery {
+    margin-top: 5rem;
+}
+
+.gridContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.grid {
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 20px;
+}
+
+.gridImage {
+    cursor: pointer;
+    width: 95%;
+    height: 13.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    border-radius: 15px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 1rem 1rem;
+    background-color: #ffffff;
+    border: none;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.buttonContainer {
+    height: 110px;
+    align-items: flex-end;
+}
+
+.button:hover {
+    transition-duration: 0.3s;
+    height: 110px;
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.aboutImageText {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.image {
+    filter: brightness(60%);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.7s all ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.aboutImageText:hover .image {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition-duration: 1s;
+}
+
+.text h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 58%;
+    margin: auto;
+    width: fit-content; /* Need a specific value to work */
+    font-size: 80px;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.text h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    transition: 0.5s;
+}
+
+.overview {
+    width: 100%;
+    height: 100%;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.overviewTitle {
+    margin: auto;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.overviewPart {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 12rem;
+}
+
+.overviewPart1H {
+    width: 50%;
+    font-size: 3.2rem;
+}
+
+.span {
+    color: #767676;
+}
+
+.overviewPart1P {
+    width: 47%;
+    line-height: 28px;
+    align-self: flex-end;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.overviewPart2H {
+    width: 50%;
+    font-size: 3.2rem;
+}
+
+.overviewPart2 {
+    width: 47%;
+    line-height: 28px;
+}
+
+.overviewPart2h {
+    font-size: 1.3rem;
+    line-height: initial;
+    font-weight: 500;
+}
+
+.overviewPart2P {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.companyInfo {
+    display: flex;
+    padding: 3rem 12rem;
+}
+
+.line {
+    width: auto;
+    border-top: 2px solid #605f5f;
+    margin: 7rem 12rem 0;
+}
+
+.our {
+    margin-top: 3rem;
+    padding: 3rem 9rem;
+    margin-bottom: 5rem;
+}
+
+.ourPart {
+    display: flex;
+    flex-direction: column;
+}
+
+.vision, .mission {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.vision img, .mission img {
+    width: 55%;
+}
+
+.mission {
+    margin: -50px;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.peopleTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 12rem;
+}
+
+.team {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.teamOne {
+    flex: 1 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.teamOne img {
+    border-radius: 4%;
+}
+
+.teamOne h2, .teamOne p {
+    margin: 0;
+}
+
+.teamOne p {
+    font-size: 0.9rem;
+}
+
+.teamOne h2 {
+    margin-top: 1rem;
+}
+
+.imageData {
+    max-width: 12rem;
+}
+
+
+.businessProcess {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.map {
+    border: 0;
+    width: 100%;
+    height: 600px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .grid {
+        grid-template-columns: 25% 25% 25%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .grid {
+        grid-template-columns: 40% 40%;
+    }
+    .text h1 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .grid {
+        grid-template-columns: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 1040px) {
+    .list {
+        width: 90%;
+        padding: 1.5rem 1rem;
+    }
+    .map {
+        height: 350px;
+    }
+    .desc {
+        padding: 3rem 2rem 0;
+    }
+    .aboutImageText {
+        height: 60vh;
+    }
+
+    .aboutImageText img {
+        object-fit: cover;
+    }
+
+    .text h1 {
+        top: 50%;
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+    }
+
+    .overview {
+        width: auto;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .overviewTitle {
+        font-size: 3rem;
+    }
+
+    .overviewPart {
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+
+    .overviewPart1H {
+        width: 100%;
+    }
+
+    .overviewPart1P {
+        width: 100%;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .overviewPart2H {
+        width: 100%;
+    }
+
+    .overviewPart2 {
+        width: 100%;
+    }
+
+    .peopleTeam {
+        text-align: center;
+        width: auto;
+        padding: 3rem 5%;
+    }
+
+    .teamOne {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .our {
+        text-align: center;
+        margin: 0;
+        width: auto;
+        padding: 3rem 5%;
+    }
+
+    .vision {
+        flex-direction: column;
+    }
+
+    .vision img {
+        width: 100%;
+    }
+
+    .ourPart {
+        margin: 0;
+    }
+
+    .mission {
+        margin: 5rem 0 0 0;
+        flex-direction: column-reverse;
+    }
+
+    .mission img {
+        width: 100%;
+    }
+
+    .ourPart {
+        margin: 0;
+    }
+}
+
