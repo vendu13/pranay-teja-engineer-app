@@ -9,22 +9,22 @@ const KeyPeople = () => {
     const peopleData = [
         {
             id: 1,
-            name: 'Mr.Ajit Kulkarni (Senior V.P)',
+            name: 'Person 1',
             desc: 'Expertise in Electrical & Mechanical works and execution of works. Involve in companies works right from tendering up to commissioning of the project. Takes responsibility of procurement of materials and making necessary co-ordination with finance and execution teams and has been a big key to success.',
         },
         {
             id: 2,
-            name: 'Mr.Ajit Kulkarni (Senior V.P)',
+            name: 'Person 2',
             desc: 'Expertise in Electrical & Mechanical works and execution of works. Involve in companies works right from tendering up to commissioning of the project. Takes responsibility of procurement of materials and making necessary co-ordination with finance and execution teams and has been a big key to success.',
         },
         {
             id: 3,
-            name: 'Mr.Ajit Kulkarni (Senior V.P)',
+            name: 'Person 3',
             desc: 'Expertise in Electrical & Mechanical works and execution of works. Involve in companies works right from tendering up to commissioning of the project. Takes responsibility of procurement of materials and making necessary co-ordination with finance and execution teams and has been a big key to success.',
         },
         {
             id: 4,
-            name: 'Mr.Ajit Kulkarni (Senior V.P)',
+            name: 'Person 4',
             desc: 'Expertise in Electrical & Mechanical works and execution of works. Involve in companies works right from tendering up to commissioning of the project. Takes responsibility of procurement of materials and making necessary co-ordination with finance and execution teams and has been a big key to success.',
         }
     ]
