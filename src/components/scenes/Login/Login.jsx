@@ -1,52 +1,60 @@
-import {useForm} from 'react-hook-form';
-import {Navigate} from 'react-router-dom';
-import {HiOutlineMail} from 'react-icons/hi';
-import {RiLockPasswordFill} from 'react-icons/ri';
-import {ExclamationCircleOutlined} from '@ant-design/icons';
-import {Input, Text} from '@chakra-ui/react';
-import style from './Login.module.css';
-import {useLoginMutation} from '../../../store/user/userApi';
-import {useSelector} from "react-redux";
+import { useForm } from "react-hook-form";
+import { Navigate } from "react-router-dom";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { ExclamationCircleOutlined } from "@ant-design/icons";
+import { Input, Text } from "@chakra-ui/react";
+import style from "./Login.module.css";
+import { useLoginMutation } from "../../../store/user/userApi";
+import { useSelector } from "react-redux";
 import Loader from "../../Loader/Loader.jsx";
-import React, { useState } from 'react';
+import React, { useState } from "react"; // Ensure React is imported
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  // Controlled inputs with state
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
+  // Form submission handler
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsLoading(true);
+    event.preventDefault(); // Prevent page reload on form submission
+    setIsLoading(true); // Show loading indicator when request starts
+    setErrorMessage(""); // Clear any previous error messages
 
     try {
+      // Make the POST request to the backend login endpoint
       const response = await fetch(
-        'https://pranay-teja-engineers-bb1370044d4a.herokuapp.com/auth/login',
+        "https://pranay-teja-engineers-bb1370044d4a.herokuapp.com/auth/login", // Ensure correct backend URL
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            username,
-            password,
+            username, // Send the username from input
+            password, // Send the password from input
           }),
         }
       );
 
-      const data = await response.json();
+      const data = await response.json(); // Parse the response data
 
       if (response.ok) {
-        localStorage.setItem('token', data.token);
-        window.location.href = '/admin';
+        // Successful login: store the JWT token and redirect to the Admin page
+        localStorage.setItem("token", data.token); // Store token securely
+        window.location.href = "/admin"; // Redirect to the admin page
       } else {
-        setErrorMessage('Login failed: ' + data.message);
+        // If the response is not OK, show error message from backend
+        setErrorMessage(data.message || "Login failed. Please try again.");
       }
     } catch (err) {
-      console.error('Error during login:', err);
-      setErrorMessage('An error occurred during login.');
+      // Handle network or unexpected errors
+      console.error("Error during login:", err);
+      setErrorMessage("An error occurred during login. Please try again.");
     } finally {
+      // Hide loading indicator when request completes
       setIsLoading(false);
     }
   };
@@ -54,35 +62,39 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Log In</h2>
+      {/* Display error message if it exists */}
       {errorMessage && <p className="error">{errorMessage}</p>}
+
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">Admin username</label>
+          <label htmlFor="username">Admin Username</label>
           <input
             type="text"
             id="username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)} // Controlled input
             required
           />
         </div>
+
         <div>
           <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)} // Controlled input
             required
           />
         </div>
+
         <button type="submit" disabled={isLoading}>
-          {isLoading ? 'Logging in...' : 'Sign In'}
+          {isLoading ? "Logging in..." : "Sign In"}{" "}
+          {/* Loading state on button */}
         </button>
       </form>
     </div>
   );
 };
 
-// Ensure this export statement is outside and after the component
 export default Login;
