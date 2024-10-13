@@ -20,28 +20,26 @@ const Login = () => {
   // New handleLogin function
   const handleLogin = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
+    setIsLoading(true); // Set loading state to true
 
     try {
+      // Make a POST request to your backend's login route (without JWT for testing)
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/auth/login`,
+        `${import.meta.env.VITE_API_URL}/auth/login`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            name: username, // Ensure the field name matches the backend
-            password: password,
-          }),
+          body: JSON.stringify({ username, password }), // Send username and password to backend
         }
       );
 
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
-        window.location.href = "/admin";
+        // No need to store JWT token, just redirect to admin page
+        window.location.href = "/admin"; // Redirect to admin page after successful login
       } else {
         setErrorMessage("Invalid login credentials");
       }
@@ -49,7 +47,7 @@ const Login = () => {
       console.error("Error during login:", err);
       setErrorMessage("An error occurred during login");
     } finally {
-      setIsLoading(false);
+      setIsLoading(false); // Set loading state to false
     }
   };
 
