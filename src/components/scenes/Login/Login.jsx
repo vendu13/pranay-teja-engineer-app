@@ -1,29 +1,23 @@
-import { useForm } from "react-hook-form";
-import { Navigate } from "react-router-dom";
-import { HiOutlineMail } from "react-icons/hi";
-import { RiLockPasswordFill } from "react-icons/ri";
-import { ExclamationCircleOutlined } from "@ant-design/icons";
-import { Input, Text } from "@chakra-ui/react";
-import style from "./Login.module.css";
-import { useLoginMutation } from "../../../store/user/userApi";
-import { useSelector } from "react-redux";
-import Loader from "../../Loader/Loader.jsx";
-import React, { useState } from "react"; // Ensure React is imported
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // useNavigate for redirection
+import style from "./Login.module.css"; // Assuming there's some styling file
 
 const Login = () => {
-  // State to store username, password, loading state, and error message
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [username, setUsername] = useState(""); // State to track username input
+  const [password, setPassword] = useState(""); // State to track password input
+  const [errorMessage, setErrorMessage] = useState(""); // State to track error message
+  const [isLoading, setIsLoading] = useState(false); // State to track loading status
 
-  // New handleLogin function
+  const navigate = useNavigate(); // Hook to navigate/redirect
+
+  // Handle form submit
   const handleLogin = async (e) => {
-    e.preventDefault();
-    setIsLoading(true); // Set loading state to true
+    e.preventDefault(); // Prevent default form submission behavior
+    setIsLoading(true); // Set loading to true while request is processed
+    setErrorMessage(""); // Reset the error message
 
     try {
-      // Make a POST request to your backend's login route (without JWT for testing)
+      // Make the POST request to the login API
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/auth/login`,
         {
@@ -31,38 +25,47 @@ const Login = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ username, password }), // Send username and password to backend
+          body: JSON.stringify({ username, password }), // Send username and password as JSON in the body
         }
       );
 
-      const data = await response.json();
+      const data = await response.json(); // Parse the JSON response
 
       if (response.ok) {
-        // No need to store JWT token, just redirect to admin page
-        window.location.href = "/admin"; // Redirect to admin page after successful login
+        // Store user or token if needed in localStorage/sessionStorage
+        // localStorage.setItem("token", data.token);
+
+        // Redirect to Admin page
+        navigate("/admin");
       } else {
-        setErrorMessage("Invalid login credentials");
+        // If login fails, show error message
+        setErrorMessage(data.message || "Invalid login credentials");
       }
     } catch (err) {
-      console.error("Error during login:", err);
-      setErrorMessage("An error occurred during login");
+      console.error(err); // Log the error for debugging
+      setErrorMessage("An error occurred during login.");
     } finally {
-      setIsLoading(false); // Set loading state to false
+      setIsLoading(false); // Stop loading
     }
   };
 
   return (
-    <div className="login-container">
+    <div className={style.loginContainer}>
       <h2>Log In</h2>
-      {errorMessage && <p className="error">{errorMessage}</p>}
+      {errorMessage && (
+        <p className={style.errorMessage}>{errorMessage}</p>
+      )}{" "}
+      {/* Show error if present */}
       <form onSubmit={handleLogin}>
+        {" "}
+        {/* Bind form submit to handleLogin */}
         <div>
           <label htmlFor="username">Admin Username</label>
           <input
             type="text"
             id="username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)} // Update username state
+            onChange={(e) => setUsername(e.target.value)} // Update username state on input change
             required
           />
         </div>
@@ -72,12 +75,12 @@ const Login = () => {
             type="password"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)} // Update password state
+            onChange={(e) => setPassword(e.target.value)} // Update password state on input change
             required
           />
         </div>
         <button type="submit" disabled={isLoading}>
-          {isLoading ? "Logging in..." : "Sign In"}
+          {isLoading ? "Logging in..." : "Sign In"} {/* Show loading state */}
         </button>
       </form>
     </div>
