@@ -11,50 +11,40 @@ import Loader from "../../Loader/Loader.jsx";
 import React, { useState } from "react"; // Ensure React is imported
 
 const Login = () => {
-  // Controlled inputs with state
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Form submission handler
+  // API URL from environment variables
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent page reload on form submission
-    setIsLoading(true); // Show loading indicator when request starts
-    setErrorMessage(""); // Clear any previous error messages
+    event.preventDefault(); // Prevent form submission default behavior
+    setIsLoading(true); // Set loading state
 
     try {
-      // Make the POST request to the backend login endpoint
-      const response = await fetch(
-        "https://pranay-teja-engineers-bb1370044d4a.herokuapp.com/auth/login", // Ensure correct backend URL
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username, // Send the username from input
-            password, // Send the password from input
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
 
-      const data = await response.json(); // Parse the response data
+      const data = await response.json();
 
       if (response.ok) {
-        // Successful login: store the JWT token and redirect to the Admin page
-        localStorage.setItem("token", data.token); // Store token securely
-        window.location.href = "/admin"; // Redirect to the admin page
+        // Store JWT token and redirect to Admin page
+        localStorage.setItem("token", data.token);
+        window.location.href = "/admin";
       } else {
-        // If the response is not OK, show error message from backend
-        setErrorMessage(data.message || "Login failed. Please try again.");
+        setErrorMessage("Login failed: " + data.message);
       }
     } catch (err) {
-      // Handle network or unexpected errors
       console.error("Error during login:", err);
-      setErrorMessage("An error occurred during login. Please try again.");
+      setErrorMessage("An error occurred during login.");
     } finally {
-      // Hide loading indicator when request completes
       setIsLoading(false);
     }
   };
@@ -62,9 +52,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Log In</h2>
-      {/* Display error message if it exists */}
       {errorMessage && <p className="error">{errorMessage}</p>}
-
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Admin Username</label>
@@ -72,25 +60,22 @@ const Login = () => {
             type="text"
             id="username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)} // Controlled input
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
         </div>
-
         <div>
           <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)} // Controlled input
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-
         <button type="submit" disabled={isLoading}>
-          {isLoading ? "Logging in..." : "Sign In"}{" "}
-          {/* Loading state on button */}
+          {isLoading ? "Logging in..." : "Sign In"}
         </button>
       </form>
     </div>
