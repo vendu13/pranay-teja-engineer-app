@@ -47,7 +47,39 @@ function Login() {
     const submitForm = async (values) => {
         await loginHook(values);
     };
+// Add this function to handle the login
+  const handleLogin = async (username, password) => {
+    try {
+      const response = await fetch(
+        "https://pranay-teja-engineers-bb1370044d4a.herokuapp.com/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
 
+      const data = await response.json();
+
+      if (response.ok) {
+        // Store the JWT token in localStorage or sessionStorage
+        localStorage.setItem("token", data.token);
+
+        // Optionally store the user data (if you need to display it later)
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        // Redirect to the Admin Page
+        window.location.href = "/admin";
+      } else {
+        // Handle login error (e.g., wrong credentials)
+        console.log("Login failed:", data.message);
+      }
+    } catch (err) {
+      console.error("Error during login:", err);
+    }
+  };
     if (user.name) {
         return <Navigate to="/admin" replace/>;
     }
