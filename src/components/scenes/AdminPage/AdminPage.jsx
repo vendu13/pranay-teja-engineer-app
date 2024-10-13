@@ -14,7 +14,66 @@ import {useGetMessagesQuery} from "../../../store/user/userApi.js";
 const API_URL = import.meta.env.VITE_API_URL;
 
 const AdminPage = () => {
+  // State to store user data, loading state, and error message
+  const [userData, setUserData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // Function to fetch user data
+  const fetchUserData = async () => {
+    const token = localStorage.getItem('token'); // Retrieve the token from localStorage
+
+    if (!token) {
+      setError('No token found, please log in again.');
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/me`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setUserData(data.user); // Store user data in state
+      } else {
+        setError('Failed to fetch user data');
+      }
+    } catch (err) {
+      setError('An error occurred while fetching user data');
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
+  };
+
+  // Call fetchUserData when the component mounts
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  return (
+    <div className={styles.admin}>
+      <h2>Welcome to the Admin Page, {userData && userData.name}!</h2>
+      <div className={styles.adminButtons}>
+        <button className={styles.finalButton}>Manage Users</button>
+        <button className={styles.finalButton}>Manage Projects</button>
+      </div>
+    </div>
+  );
+};
     const {isLoading, isFetching} = useGetMessagesQuery(null);
     const projects = useSelector(state => state.projectsReducer.projects)
     const messages = useSelector(state => state.userReducer.messages)

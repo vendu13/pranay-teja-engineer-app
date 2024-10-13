@@ -11,41 +11,47 @@ import Loader from "../../Loader/Loader.jsx";
 import React, { useState } from "react"; // Ensure React is imported
 
 const Login = () => {
+  // State to store username, password, loading state, and error message
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // API URL from environment variables
-  const apiUrl = process.env.REACT_APP_API_URL;
-
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent form submission default behavior
+  // New handleLogin function
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Prevent form submission default behavior
     setIsLoading(true); // Set loading state
 
     try {
-      const response = await fetch(`${apiUrl}/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      // API call to your backend login route
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name: username, password: password }), // Send username and password
+        }
+      );
 
       const data = await response.json();
 
       if (response.ok) {
-        // Store JWT token and redirect to Admin page
+        // Store JWT token in localStorage
         localStorage.setItem("token", data.token);
-        window.location.href = "/admin";
+
+        // Redirect to the admin page after successful login
+
+        return <Navigate to="/admin" />;
       } else {
-        setErrorMessage("Login failed: " + data.message);
+        setErrorMessage("Invalid login credentials");
       }
     } catch (err) {
-      console.error("Error during login:", err);
-      setErrorMessage("An error occurred during login.");
+      console.error(err);
+      setErrorMessage("An error occurred during login");
     } finally {
-      setIsLoading(false);
+      setIsLoading(false); // Stop loading
     }
   };
 
@@ -53,14 +59,14 @@ const Login = () => {
     <div className="login-container">
       <h2>Log In</h2>
       {errorMessage && <p className="error">{errorMessage}</p>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleLogin}>
         <div>
           <label htmlFor="username">Admin Username</label>
           <input
             type="text"
             id="username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)} // Update username state
             required
           />
         </div>
@@ -70,7 +76,7 @@ const Login = () => {
             type="password"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)} // Update password state
             required
           />
         </div>
