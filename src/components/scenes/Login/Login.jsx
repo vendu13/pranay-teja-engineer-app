@@ -31,10 +31,11 @@ const Login = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name: username, password: password }), // Send username and password
-        }
+          body: JSON.stringify({ name: username, password: password }),
+          // Send username and password
+        } // Check what values are being received in the request body
       );
-
+      console.log(req.body);
       const data = await response.json();
 
       if (response.ok) {
